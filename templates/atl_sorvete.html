@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Sorvete</title>
+</head>
+<body>
+    <h1>Atualizar Sorvete</h1>
+    <form id="update-form" method="POST" action="/sorvetes/{{ sorvete_id }}">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" value="{{ sorvete.nome }}"><br>
+        <label for="preco">Preço:</label><br>
+        <input type="number" id="preco" name="preco" value="{{ sorvete.preco }}"><br>
+        <label for="quantidade_estoque">Quantidade em Estoque:</label><br>
+        <input type="number" id="quantidade_estoque" name="quantidade_estoque" value="{{ sorvete.quantidade_estoque }}"><br>
+        <button type="submit">Atualizar Sorvete</button>
+    </form>
+</body>
+</html>
